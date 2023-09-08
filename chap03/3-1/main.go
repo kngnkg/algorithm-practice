@@ -1,7 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strconv"
+	"strings"
 )
 
 // go run main.go < input.txt
@@ -14,9 +18,14 @@ func main() {
 	fmt.Scan(&v)
 	fmt.Scan(&N)
 
-	a := make([]int, N)
-	for i := 0; i < N; i++ {
-		fmt.Scan(&a[i])
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+	inputs := strings.Split(sc.Text(), " ")
+
+	var a []int
+	for _, input := range inputs {
+		val, _ := strconv.Atoi(input)
+		a = append(a, val)
 	}
 
 	foundId := -1
