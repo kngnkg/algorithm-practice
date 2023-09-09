@@ -8,8 +8,6 @@ import (
 	"strings"
 )
 
-// go run main.go < input.txt
-
 func main() {
 	var v int
 
@@ -28,13 +26,12 @@ func main() {
 		a = append(a, val)
 	}
 
-	foundId := -1
-
+	count := 0
 	for i := 0; i < N; i++ {
 		if a[i] == v {
-			foundId = i
+			count++
 		}
 	}
 
-	fmt.Println(foundId)
+	fmt.Println(count)
 }

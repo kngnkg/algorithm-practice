@@ -8,8 +8,6 @@ import (
 	"strings"
 )
 
-// go run main.go < input.txt
-
 func main() {
 	var v int
 
